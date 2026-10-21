@@ -1,0 +1,57 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Головна - {{ title }}{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto py-10">
+
+    <div class="bg-blue-600 text-white rounded-3xl p-8 md:p-16 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+            Ласкаво просимо до WebStudio!
+        </h1>
+
+        <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+            Ми створюємо сучасні вебсайти, зручні інтерфейси
+            та ефективні цифрові рішення для вашого бізнесу.
+        </p>
+
+        <a href="{{ url_for('services') }}"
+           class="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition">
+            Наші послуги
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-xl font-bold text-blue-600 mb-3">
+                Сучасні технології
+            </h2>
+            <p class="text-gray-600">
+                Використовуємо Python, Flask та сучасні інструменти веброзробки.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-xl font-bold text-blue-600 mb-3">
+                Зручний дизайн
+            </h2>
+            <p class="text-gray-600">
+                Створюємо зрозумілі інтерфейси для комп'ютерів і смартфонів.
+            </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h2 class="text-xl font-bold text-blue-600 mb-3">
+                Індивідуальний підхід
+            </h2>
+            <p class="text-gray-600">
+                Добираємо рішення відповідно до потреб кожного клієнта.
+            </p>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+```
