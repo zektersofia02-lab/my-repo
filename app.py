@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
+
 @app.route('/')
 def home():
     return "Головна сторінка сайту"
@@ -13,7 +13,7 @@ def contact():
 
 if __name__ == '__main__':
     app.run(debug=True)
-=======
+
 # Маршрут для головної сторінки
 @app.route('/')
 def index():
@@ -21,4 +21,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
->>>>>>> c0d3714 (docs: ПІБ: Зектер Софія)
+і
