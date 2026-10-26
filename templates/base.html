@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>{% block title %}Наш проєкт{% endblock %}</title>
     <!-- Підключаємо Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,14 +17,42 @@
             <div class="space-x-6 flex items-center">
                 <!-- Посилання на сторінку контактів, яке ми робимо -->
                 <a href="{{ url_for('contact') }}" class="hover:text-blue-200 transition">Контакти</a>
+=======
+    <!-- Підключення Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>{% block title %}Мій сайт{% endblock %}</title>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Навігаційне меню (однакове для всього сайту) -->
+    <nav class="bg-blue-600 text-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="font-bold text-xl">НазваПроєкту</a>
+            <div class="space-x-4">
+                <a href="{{ url_for('index') }}" class="hover:underline">Головна</a>
+                <!-- Інші посилання створять ваші колеги по команді -->
+>>>>>>> c0d3714 (docs: ПІБ: Зектер Софія)
             </div>
         </div>
     </nav>
 
+<<<<<<< HEAD
     <!-- Головний контент сторінок -->
     <main class="flex-grow">
         {% block content %}{% endblock %}
     </main>
 
+=======
+    <!-- Головний контент, який змінюватиметься на різних сторінках -->
+    <main class="container mx-auto px-6 py-8 flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Підвал сайту -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2026 Навчальний вебпроєкт команди.</p>
+    </footer>
+
+>>>>>>> c0d3714 (docs: ПІБ: Зектер Софія)
 </body>
 </html>
