@@ -1,3 +1,5 @@
+ feature/contact-and-styles
+<<!DOCTYPE html>
 
 <nav class="bg-blue-600 text-white shadow-md py-4 px-6">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
@@ -18,11 +20,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ feature/contact-and-styles
+    <title>{% block title %}WebStudio{% endblock %}</title>
+    
+ 
 
     <title>{% block title %}Наш проєкт{% endblock %}</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Підключаємо власний файл стилів (для градієнта та кастомних ефектів) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+feature/contact-and-styles
+<body class="text-gray-900 min-h-screen flex flex-col">
+
+    <!-- Шапка сайту та навігація -->
+    <header class="bg-teal-700 text-white shadow-md">
+        <nav class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <a href="{{ url_for('index') }}" class="text-2xl font-bold">
+                WebStudio
+            </a>
+
+            <!-- Посилання навігації -->
+            <div class="space-x-6 font-medium">
+                <a href="{{ url_for('index') }}" class="hover:text-teal-200 transition">Головна</a>
+                <a href="{{ url_for('about') }}" class="hover:text-teal-200 transition">Про нас</a>
+                <a href="{{ url_for('services') }}" class="hover:text-teal-200 transition">Послуги</a>
+                <a href="{{ url_for('contact') }}" class="hover:text-teal-200 transition">Контакти</a>
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
 
     <!-- Навігація -->
@@ -62,6 +87,19 @@
             </div>
         </nav>
     </header>
+feature/contact-and-styles
+    <!-- Головний контент сторінок -->
+    <main class="flex-grow px-6 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Підвал сайту -->
+    <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-auto">
+        <p>&copy; 2026 WebStudio. Усі права захищені.</p>
+    </footer>
+
+</body>
+</html>
 
 
     <!-- Основний контент -->
@@ -92,4 +130,3 @@
 
 </body>
 </html>
-
