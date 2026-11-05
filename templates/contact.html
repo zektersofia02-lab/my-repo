@@ -1,36 +1,67 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <title>Контакти команди</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Наша команда</h1>
-        <p>Зв'яжіться з будь-ким із учасників проєкту:</p>
-        
-        <div class="contact-card">
-            <h3>Софія</h3>
-            <p><strong>Email:</strong> zektersofia0.2@gmail.com</p>
-        </div>
+{% extends "base.html" %}
 
-        <div class="contact-card">
-            <h3>Олександра</h3>
-            <p><strong>Email:</strong> oleksandrakosukhina@gmail.com</p>
-        </div>
+{% block title %}Контакти - WebStudio{% endblock %}
 
-        <div class="contact-card">
-            <h3>Анна</h3>
-            <p><strong>Email:</strong> annaschanattt@gmail.com</p>
-        </div>
+{% block content %}
+<div class="max-w-6xl mx-auto py-10">
 
-        <div class="contact-card">
-            <h3>Дарина</h3>
-            <p><strong>Email:</strong> darinagolovacuk39@gmail.com</p>
-        </div>
-
-        <a href="/" class="btn-custom">Повернутися на головну</a>
+    <!-- Заголовок сторінки -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-teal-800 mb-4">
+            Наша команда
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Зв'яжіться з будь-ким із учасників проєкту, і ми з радістю допоможемо вам з реалізацією вашої ідеї!
+        </p>
     </div>
-</body>
-</html>
+
+    <!-- Сітка з картками учасників -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Картка 1: Софія -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 contact-card">
+            <h2 class="text-xl font-bold text-teal-700 mb-2">Софія</h2>
+            <p class="text-sm text-gray-500 mb-4">Розробниця / Учасниця проєкту</p>
+            <a href="mailto:zektersofia.02@gmail.com" class="text-teal-600 hover:text-teal-800 font-medium text-sm break-all flex items-center gap-1">
+                📧 zektersofia.02@gmail.com
+            </a>
+        </div>
+
+        <!-- Картка 2: Олександра -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 contact-card">
+            <h2 class="text-xl font-bold text-teal-700 mb-2">Олександра</h2>
+            <p class="text-sm text-gray-500 mb-4">Розробниця / Учасниця проєкту</p>
+            <a href="mailto:oleksandrakosukhina@gmail.com" class="text-teal-600 hover:text-teal-800 font-medium text-sm break-all flex items-center gap-1">
+                📧 oleksandrakosukhina@gmail.com
+            </a>
+        </div>
+
+        <!-- Картка 3: Анна -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 contact-card">
+            <h2 class="text-xl font-bold text-teal-700 mb-2">Анна</h2>
+            <p class="text-sm text-gray-500 mb-4">Розробниця / Учасниця проєкту</p>
+            <a href="mailto:annaschanattt@gmail.com" class="text-teal-600 hover:text-teal-800 font-medium text-sm break-all flex items-center gap-1">
+                📧 annaschanattt@gmail.com
+            </a>
+        </div>
+
+        <!-- Картка 4: Дарина -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 contact-card">
+            <h2 class="text-xl font-bold text-teal-700 mb-2">Дарина</h2>
+            <p class="text-sm text-gray-500 mb-4">Розробниця / Учасниця проєкту</p>
+            <a href="mailto:darinagolovacuk39@gmail.com" class="text-teal-600 hover:text-teal-800 font-medium text-sm break-all flex items-center gap-1">
+                📧 darinagolovacuk39@gmail.com
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Кнопка повернення на головну -->
+    <div class="text-center mt-12">
+        <a href="{{ url_for('index') }}" class="inline-block bg-teal-700 text-white font-bold px-8 py-3 rounded-xl hover:bg-teal-800 transition shadow-md">
+            ← Повернутися на головну
+        </a>
+    </div>
+
+</div>
+{% endblock %}
